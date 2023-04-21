@@ -1,0 +1,74 @@
+\section*{Algebraic geometry}
+\begin{sortedlist}
+  \sortitem[Presheaf]{\textbf{Presheaf} (on topological spaces). A functor $\mathcal{F}:\text{Open($X$)}^{op}\rightarrow D$. For example: for $D=$ \textbf{Set}, a \textit{presheaf of sets.}}
+  \sortitem[Sheaf]{\textbf{Sheaf.} A presheaf satisfying \begin{enumerate}[A.]
+      \item (Identity) Sections are uniquely identified by their values on an open cover. If $U=\bigcup U_i$ and $f,g$ are such that $f|_{U_i}=g|_{U_i}$ for all $i$ then $f=g.$
+      \item (Gluability) Compatible sections defined on an open cover of $U$ glue to a section over $U$. If  $U=\bigcup U_i$ and $f_i\in \mathcal{F}(U_i)$ are s.t. $f_i|_{U_i\cap U_j}=f_j|_{U_i\cap U_j}$ for all $i,j$ then there is some $f\in \mathcal{F}(U)$ s.t. $f|_{U_i}=f_i$.
+  \end{enumerate}
+    \begin{sortedlist}
+    \sortitem[Pushforward]{\textbf{pushforward} sheaf. Given a (pre)sheaf $\mathcal{F}$ of $X$ and a map $\pi:X\rightarrow Y$, the (pre)sheaf $\pi_*\mathcal{F}$ of $Y$ such that $\pi_*\mathcal{F}(U)=\mathcal{F}(\pi^{-1}(U))$.}
+    \sortitem[Constant]{\textbf{constant} sheaf associated to a set $S$. The sheaf $\underline{S}$ such that $$\underline{S}(U)=\{\text{cts. maps } U\rightarrow S^{\delta}.\}$$  }
+    \sortitem[Inverse image]{\textbf{inverse image} sheaf. Given a sheaf $\mathcal{F}$ of $X$ and a map $\pi:X\rightarrow Y$, the sheaf $\pi^{-1}\mathcal{F}$ where $\pi^{-1}$ is left adjoint to pushforward $\pi_*$.}
+    \sortitem[Structure]{\textbf{structure} sheaf. See \textit{affine scheme.}}
+    \end{sortedlist}
+  }
+
+  \sortitem[Global sections]{\textbf{Global sections} of a sheaf $\mathcal{F}$ on X. The sections $\mathcal{F}(X)$.}
+  \sortitem[Stalk]{\textbf{Stalk} of $\mathcal{F}$ at $p.$ The set/ring/etc. $\mathcal{F}_p$ of \textit{germs} at $p.$ Equivalently, the colimit
+  $$\mathcal{F}_p=\text{colim} \large(\mathcal{F}(U)\large)$$ over all opens $U$ containing $p.$}
+  \sortitem[Germ]{\textbf{Germ} of $\mathcal{F}$ at $p$. An element of the stalk $\mathcal{F}_p$ at $p.$ A section of $\mathcal{F}$ at some open $U$ containing $p$ modulo the relation that $(U,f)\sim (V,g)$ if they both restrict to some $(W,h)$ containing $p.$}
+\sortitem[Ringed space]{\textbf{Ringed space}. A sheaf of rings $(X,\mathcal{O}_X)$ on a topological space $X.$ A morphism is a continuous map $X\rightarrow Y$ and a map $\mathcal{O}_Y\rightarrow \pi_*\mathcal{O}_X$.}
+\begin{sortedlist}
+\sortitem[Locally ringed space]{\textbf{locally ringed space.} A ringed space where all stalks are local rings. Morphisms between locally ringed spaces are morphisms of ringed spaces where the induced map on stalks $\pi^{\#}:\mathcal{O}_{Y,\pi(p)}\rightarrow \mathcal{O}_{X,p}$ sends the maximal ideal of the former into the maximal ideal of the latter.}
+\end{sortedlist}
+}
+
+\sortitem[Local ring]{\textbf{Local ring.} A ring with a unique maximal ideal.}
+\sortitem[Zariski topology]{\textbf{Zariski topology.} See \textit{affine scheme.}}
+\sortitem[Distinguished open]{\textbf{Distinguished open set}. For $f\in A$, the open $D(f)=V(f)^c$ of Spec $A$. The open
+$$D(f):=\{[\mathfrak{p}]\in \text{Spec }A:f\notin \mathfrak{p}\}.$$ The set of primes of $A$ where $f$ does not vanish, i.e. $A\rightarrow A/p \quad f\not\mapsto 0.$}
+\sortitem[Scheme]{\textbf{Scheme}. A \textit{ringed space} $(X,\mathcal{O}_X)$ such that for every $x\in X$ there exists an open $U$ containing $x$ such that $(U,\mathcal{O}_X|_{U})$ is an \textit{affine scheme}. Morphisms between schemes are morphisms as \textit{locally ringed spaces}.
+\begin{sortedlist}
+    \sortitem[Affine scheme]{\textbf{affine} scheme. Given a ring $A,$ the locally ringed space (Spec $A$,$\mathcal{O}_{\text{Spec }A}$) where
+\begin{itemize}
+    \item[$*$] Spec $A$ is the set of prime ideals of $A$ with the \textbf{Zariski topology}: the closed sets are the \textbf{vanishing sets} $V(S):=\{[\mathfrak{p}]\in \text{Spec }A:S\subset \mathfrak{p}\}$ for subsets $S\subset R$, i.e. the set of points where all elements of $S$ vanish.
+    \item[$*$] $\mathcal{O}_{\text{Spec }A}$ is the \textbf{structure sheaf} defined on distinguished opens by  $$\mathcal{O}_{\text{Spec }A}(D(f))=A_{\{g\in A: D(f)\subset D(g)\}}\cong A_f.$$
+\end{itemize}
+}
+\sortitem[Projective]{\textbf{projective} scheme over $A$. A scheme of the form Proj $S_{\bullet}$ where $S_{\bullet}$ is a finitely generated ring over $A$. \todo{Define Proj.}
+}
+\sortitem[Quasiseparated]{\textbf{quasiseparated} scheme. \todo{\dots}
+}
+\sortitem[Quasicompact]{\textbf{quasicompact} scheme. \todo{\dots}
+}
+\sortitem[Irreducible]{\textbf{irreducible} scheme. \todo{\dots}
+}
+\sortitem[A-scheme]{\textbf{$\mathbf{A}$-scheme.} A scheme $X$ with a morphism $X\rightarrow \text{Spec } A.$
+}
+\sortitem[Integral]{\textbf{integral} scheme. \todo{\dots}
+}
+\sortitem[Locally Noetherian]{\textbf{locally Noetherian} scheme. A scheme that can be covered by affine open sets Spec $A$, where $A$ is Noetherian.
+}
+\sortitem[Noetherian]{\textbf{Noetherian} scheme. A \textit{locally Noetherian}, \textit{quasicompact} scheme.
+}
+\sortitem[Reduced]{\textbf{reduced} scheme. \todo{\dots}
+}
+\sortitem[Finite type]{\textbf{finite type} scheme. \todo{\dots}
+}
+\sortitem[Normal]{\textbf{normal} scheme. \todo{\dots}
+}
+\sortitem[Factorial]{\textbf{factorial} scheme. \todo{\dots}
+}
+\end{sortedlist}
+}
+\sortitem[Residue field]{\textbf{Residue field} of a maximal ideal $m\subset R$. The field $R/m$. For a point $p$ of a scheme $X$, the residue field at $p$ is $$\kappa(p):=\mathcal{O}_{X,p}/\mathfrak{m}_p.$$}
+\sortitem[Generic point]{\textbf{Generic point.} \todo{\dots}}
+\sortitem[Variety]{\textbf{Variety.} 
+\begin{sortedlist}
+\sortitem[Affine]{\textbf{affine} variety. \todo{\dots}}
+\sortitem[Projective]{\textbf{projective} variety. \todo{\dots}}
+\end{sortedlist}
+}
+\sortitem[Associated points]{\textbf{Associated points} of a scheme $X$. \todo{\dots}}
+
+\end{sortedlist}
